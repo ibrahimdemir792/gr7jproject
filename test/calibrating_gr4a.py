@@ -13,7 +13,7 @@ import json
     Datasets are available as Pandas dataframe pickle in the project repository.
 """
 data_path = Path.cwd().parent / 'data'
-df = pd.read_pickle(data_path / 'L0123001.pkl')
+df = pd.read_pickle(data_path / 'adana_data.pkl')
 df.columns = ['date', 'precipitation', 'temperature', 'evapotranspiration', 'flow', 'flow_mm']
 df.index = df['date']
 print(df.head())
@@ -80,9 +80,9 @@ spotpy_setup = SpotpySetup(calibration_data)
 # sampler = spotpy.algorithms.demcz(spotpy_setup, dbformat='ram')
 # sampler = spotpy.algorithms.sa(spotpy_setup, dbformat='ram')
 # sampler = spotpy.algorithms.rope(spotpy_setup, dbformat='ram')
-sampler = spotpy.algorithms.dds(spotpy_setup, dbformat='ram', parallel='seq', optimization_direction = "maximize")
+sampler = spotpy.algorithms.dds(spotpy_setup, dbformat='ram', parallel='seq')
 
-sampler.sample(10000)
+sampler.sample(2000)
 results=sampler.getdata() 
 best_parameters = spotpy.analyser.get_best_parameterset(results, maximize=True)
 # print(spotpy.analyser.get_minlikeindex(results)) # To see min objective function
@@ -95,11 +95,13 @@ Finally, validate calibration on another time period
 """
 parameters = list(best_parameters[0])
 parameters = {"X1": parameters[0], "X2": parameters[1], "X3": parameters[2], "X4": parameters[3], "X5": parameters[4]}
-with open ("parameters.json", "w") as file:
+
+output_path = Path.cwd() / 'outputs' / 'parameters.json'
+with open (output_path, "w") as file:
     json.dump(parameters, file)
 
-start_date = datetime.datetime(1989, 1, 1, 0, 0)
-end_date = datetime.datetime(1999, 12, 31, 0, 0)
+start_date = datetime.datetime(2003, 1, 1, 0, 0)
+end_date = datetime.datetime(2013, 12, 31, 0, 0)
 mask = (df['date'] >= start_date) & (df['date'] <= end_date)
 validation_data = df.loc[mask]
 
@@ -107,8 +109,8 @@ model = ModelGr4a(parameters)
 outputs = model.run(validation_data)
 
 # Remove the first year used to warm up the model :
-filtered_input = validation_data[validation_data.index >= datetime.datetime(1990, 1, 1, 0, 0)]
-filtered_output = outputs[outputs.index >= datetime.datetime(1990, 1, 1, 0, 0)]
+filtered_input = validation_data[validation_data.index >= datetime.datetime(2004, 1, 1, 0, 0)]
+filtered_output = outputs[outputs.index >= datetime.datetime(2004, 1, 1, 0, 0)]
 
 
 fig = go.Figure([

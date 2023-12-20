@@ -27,7 +27,8 @@ inputs = inputs.get_sub_period(start_date, end_date)
 #         "X6": 17.8694,
 #         "X7": 0.292645
 #     }
-with open ("parameters.json", "r") as file:
+parameters_path = Path.cwd() / "outputs" / "parameters.json"
+with open (parameters_path, "r") as file:
     parameters = json.load(file)
 
 model = ModelGr7j(parameters)
