@@ -1,8 +1,7 @@
 from pathlib import Path
 import pandas as pd
 import datetime
-from input_data import InputDataHandler
-from gr7j import ModelGr7j
+from gr7jmodule import InputDataHandler, ModelGr7j
 import plotly.graph_objects as go
 import spotpy
 import json

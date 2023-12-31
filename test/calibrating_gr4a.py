@@ -4,8 +4,7 @@ import pandas as pd
 from numpy import sqrt, mean
 import spotpy
 import plotly.graph_objects as go
-from input_data import InputDataHandler
-from gr4a import ModelGr4a
+from gr7jmodule import InputDataHandler, ModelGr4a
 import json
 
 
