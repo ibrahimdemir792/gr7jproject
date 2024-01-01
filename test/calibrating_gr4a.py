@@ -12,7 +12,7 @@ import json
     Datasets are available as Pandas dataframe pickle in the project repository.
 """
 data_path = Path.cwd().parent / 'data'
-df = pd.read_pickle(data_path / 'adana_data.pkl')
+df = pd.read_pickle(data_path / 'nemetice_data.pkl')
 df.columns = ['date', 'precipitation', 'temperature', 'evapotranspiration', 'flow', 'flow_mm']
 df.index = df['date']
 print(df.head())
@@ -65,7 +65,7 @@ To find optimal model parameters, several optimisation algorithm can be tested a
 """
 # Reduce the dataset to a sub period :
 start_date = datetime.datetime(1998, 1, 1, 0, 0)
-end_date = datetime.datetime(2008, 1, 1, 0, 0)
+end_date = datetime.datetime(2009, 9, 30, 0, 0)
 mask = (df['date'] >= start_date) & (df['date'] <= end_date)
 calibration_data = df.loc[mask]
 
@@ -99,8 +99,8 @@ output_path = Path.cwd() / 'outputs' / 'parameters.json'
 with open (output_path, "w") as file:
     json.dump(parameters, file)
 
-start_date = datetime.datetime(2003, 1, 1, 0, 0)
-end_date = datetime.datetime(2013, 12, 31, 0, 0)
+start_date = datetime.datetime(2009, 10, 1, 0, 0)
+end_date = datetime.datetime(2015, 9, 30, 0, 0)
 mask = (df['date'] >= start_date) & (df['date'] <= end_date)
 validation_data = df.loc[mask]
 
@@ -108,8 +108,8 @@ model = ModelGr4a(parameters)
 outputs = model.run(validation_data)
 
 # Remove the first year used to warm up the model :
-filtered_input = validation_data[validation_data.index >= datetime.datetime(2004, 1, 1, 0, 0)]
-filtered_output = outputs[outputs.index >= datetime.datetime(2004, 1, 1, 0, 0)]
+filtered_input = validation_data[validation_data.index >= datetime.datetime(2010, 1, 1, 0, 0)]
+filtered_output = outputs[outputs.index >= datetime.datetime(2010, 1, 1, 0, 0)]
 
 
 fig = go.Figure([
