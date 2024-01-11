@@ -15,3 +15,7 @@ from gr7jmodule import ModelGr6j
 ```
 - initialize the parameters according to selected model L:34.
 - add or remove parameters from related lines according to Model parameters count.
+
+## RUN DIRECTORY
+- To run test, run commands from test directory
+- To run data_converter, run commands from data directory

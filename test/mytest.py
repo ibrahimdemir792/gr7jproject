@@ -17,18 +17,18 @@ end_date = datetime.datetime(1999, 12, 31, 0, 0)
 inputs = inputs.get_sub_period(start_date, end_date)
 
 # Set the model :
-# parameters = {
-#         "X1": 170.532,
-#         "X2": 0.457612,
-#         "X3": 46.6777,
-#         "X4": 3.73663,
-#         "X5": 0.435072,
-#         "X6": 17.8694,
-#         "X7": 0.292645
-#     }
-parameters_path = Path.cwd() / "outputs" / "parameters.json"
-with open (parameters_path, "r") as file:
-    parameters = json.load(file)
+parameters = {
+        "X1": 170.532,
+        "X2": 0.457612,
+        "X3": 46.6777,
+        "X4": 3.73663,
+        "X5": 0.435072,
+        "X6": 17.8694,
+        "X7": 0.292645
+    }
+# parameters_path = Path.cwd() / "outputs" / "parameters.json"
+# with open (parameters_path, "r") as file:
+#     parameters = json.load(file)
 
 model = ModelGr7j(parameters)
 model.set_parameters(parameters)  # Re-define the parameters for demonstration purpose.
