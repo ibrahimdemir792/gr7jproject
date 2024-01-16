@@ -8,7 +8,7 @@ import json
 
 # Load Catchment Data
 working_directory = Path('~/gr7jproject').expanduser().resolve()
-data_path = next(working_directory.rglob('**/MOSELLE_verisi.pkl'), None)
+data_path = next(working_directory.rglob('**/karasu.pkl'), None)
 if data_path:
     df = pd.read_pickle(data_path)
 else:

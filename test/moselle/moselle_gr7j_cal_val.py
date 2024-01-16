@@ -3,8 +3,9 @@ from numpy import sqrt, mean
 from pathlib import Path
 
 import plotly.graph_objects as go
-import datetime
+import plotly.io as pio
 import pandas as pd
+import datetime
 import spotpy
 import json
 
@@ -79,22 +80,11 @@ calibration_data = df.loc[mask]
 
 spotpy_setup = SpotpySetup(calibration_data)
 
-# sampler = spotpy.algorithms.mc(spotpy_setup, dbformat='ram')
-# sampler = spotpy.algorithms.mcmc(spotpy_setup, dbformat='ram', parallel='seq', optimization_direction = "maximize")
-# sampler = spotpy.algorithms.mle(spotpy_setup, dbformat='ram')
-# sampler = spotpy.algorithms.lhs(spotpy_setup, dbformat='ram')
-# sampler = spotpy.algorithms.sceua(spotpy_setup, dbformat='ram')
-# sampler = spotpy.algorithms.demcz(spotpy_setup, dbformat='ram')
-# sampler = spotpy.algorithms.sa(spotpy_setup, dbformat='ram')
-# sampler = spotpy.algorithms.rope(spotpy_setup, dbformat='ram')
 sampler = spotpy.algorithms.dds(spotpy_setup, dbformat='ram', parallel='seq')
 
-sampler.sample(3000)
+sampler.sample(2000)
 results=sampler.getdata() 
-best_parameters = spotpy.analyser.get_best_parameterset(results, maximize=True)
-# print(spotpy.analyser.get_minlikeindex(results)) # To see min objective function
-# print(spotpy.analyser.get_maxlikeindex(results)) # To see max objective function
-# print(best_parameters)
+best_parameters = spotpy.analyser.get_best_parameterset(results)
 
 
 """ VALIDATION
@@ -116,16 +106,44 @@ mask = (df['date'] >= start_date) & (df['date'] <= end_date)
 validation_data = df.loc[mask]
 
 model = ModelGr7j(parameters)
+model.set_parameters(parameters)
+
+# Set initial state :
+initial_states = {
+    "production_store": 0.5,
+    "routing_store": 0.5,
+    "exponential_store": 0.3,
+    "uh1": None,
+    "uh2": None
+}
+model.set_states(initial_states)
+
 outputs = model.run(validation_data)
+print("\n***VALIDATION***")
+print(outputs.head())
 
 # Remove the first year used to warm up the model :
-filtered_input = validation_data[validation_data.index >= datetime.datetime(1961, 1, 1, 0, 0)]
-filtered_output = outputs[outputs.index >= datetime.datetime(1961, 1, 1, 0, 0)]
+filtered_input = validation_data[validation_data.index >= datetime.datetime(1952, 1, 1, 0, 0)]
+filtered_output = outputs[outputs.index >= datetime.datetime(1952, 1, 1, 0, 0)]
+
+nse = spotpy.objectivefunctions.nashsutcliffe(filtered_input['flow_mm'], filtered_output['flow'])
+print(f"Used parameters for Validation: {parameters}")
+print(f"gr7j_val_nse: {nse}")
 
 
-# fig = go.Figure([
-#     go.Scatter(x=filtered_output.index, y=filtered_output['flow'], name="Calculated"),
-#     go.Scatter(x=filtered_input.index, y=filtered_input['flow_mm'], name="Observed"),
-# ])
-# fig.show()
+# Plot 1-year long hydrograph
+plot_input = validation_data[validation_data.index >= datetime.datetime(1980, 1, 1, 0, 0)]
+plot_output = outputs[outputs.index >= datetime.datetime(1980, 1, 1, 0, 0)]
 
+fig = go.Figure([
+    go.Scatter(x=plot_output.index, y=plot_output['flow'], name="Calculated"),
+    go.Scatter(x=plot_input.index, y=plot_input['flow_mm'], name="Observed"),
+])
+fig.show()
+
+
+# Save hydrograph as png
+dir_path = next(Path.cwd().rglob('outputs_moselle'), None)
+if dir_path is not None:
+    output_name = dir_path / 'gr7j_1year_hydrograph.png'
+    pio.write_image(fig, output_name, scale=5, width=1920, height=1080)

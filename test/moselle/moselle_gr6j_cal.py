@@ -70,8 +70,8 @@ To calibrate model select a sub-period from dataset
 To find optimal model parameters, several optimisation algorithm can be tested available in spotpy.
 """
 # Reduce the dataset to a sub period :
-start_date = datetime.datetime(1971, 1, 1, 0, 0)
-end_date = datetime.datetime(2006, 12, 31, 0, 0)
+start_date = datetime.datetime(1981, 1, 1, 0, 0)
+end_date = datetime.datetime(2001, 12, 31, 0, 0)
 mask = (df['date'] >= start_date) & (df['date'] <= end_date)
 calibration_data = df.loc[mask]
 
@@ -92,7 +92,7 @@ results=sampler.getdata()
 best_parameters = spotpy.analyser.get_best_parameterset(results, maximize=True)
 # print(spotpy.analyser.get_minlikeindex(results)) # To see min objective function
 # print(spotpy.analyser.get_maxlikeindex(results)) # To see max objective function
-print(best_parameters)
+# print(best_parameters)
 
 
 """ VALIDATION
@@ -109,7 +109,7 @@ if dir_path is not None:
         json.dump(parameters, file)
 
 start_date = datetime.datetime(1951, 1, 1, 0, 0)
-end_date = datetime.datetime(1970, 12, 31, 0, 0)
+end_date = datetime.datetime(1980, 12, 31, 0, 0)
 mask = (df['date'] >= start_date) & (df['date'] <= end_date)
 validation_data = df.loc[mask]
 
@@ -117,8 +117,8 @@ model = ModelGr6j(parameters)
 outputs = model.run(validation_data)
 
 # Remove the first year used to warm up the model :
-filtered_input = validation_data[validation_data.index >= datetime.datetime(1952, 1, 1, 0, 0)]
-filtered_output = outputs[outputs.index >= datetime.datetime(1952, 1, 1, 0, 0)]
+filtered_input = validation_data[validation_data.index >= datetime.datetime(1961, 1, 1, 0, 0)]
+filtered_output = outputs[outputs.index >= datetime.datetime(1961, 1, 1, 0, 0)]
 
 
 # fig = go.Figure([

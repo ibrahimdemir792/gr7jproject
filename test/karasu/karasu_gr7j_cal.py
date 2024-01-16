@@ -14,7 +14,7 @@ import json
 """
 # Load Catchment Data
 working_directory = Path('~/gr7jproject').expanduser().resolve()
-data_path = next(working_directory.rglob('**/MOSELLE_verisi.pkl'), None)
+data_path = next(working_directory.rglob('**/karasu.pkl'), None)
 if data_path:
     df = pd.read_pickle(data_path)
 else:
@@ -104,7 +104,7 @@ parameters = list(best_parameters[0])
 parameters = {"X1": parameters[0], "X2": parameters[1], "X3": parameters[2], "X4": parameters[3], "X5": parameters[4], "X6": parameters[5], "X7": parameters[6]}
 
 # Export parameters to json file
-dir_path = next(Path.cwd().rglob('outputs_moselle'), None)
+dir_path = next(Path.cwd().rglob('outputs_karasu'), None)
 if dir_path is not None:
     output_path = dir_path / 'gr7j_parameters.json'
     with open (output_path, "w") as file:

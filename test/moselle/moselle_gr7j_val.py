@@ -3,6 +3,7 @@ import pandas as pd
 import datetime
 from gr7jmodule import InputDataHandler, ModelGr7j
 import plotly.graph_objects as go
+import plotly.io as pio
 import spotpy
 import json
 
@@ -18,7 +19,7 @@ df.index = df['date']
 
 inputs = InputDataHandler(ModelGr7j, df)
 start_date = datetime.datetime(1951, 1, 1, 0, 0)
-end_date = datetime.datetime(1970, 12, 31, 0, 0)
+end_date = datetime.datetime(1980, 12, 31, 0, 0)
 inputs = inputs.get_sub_period(start_date, end_date)
 
 # Set the model parameters by hand:
@@ -44,8 +45,8 @@ model.set_parameters(parameters)  # Re-define the parameters for demonstration p
 
 # Initial state :
 initial_states = {
-    "production_store": 0.5, # was 0.5 according to Simon
-    "routing_store": 0.6, # was 0.6 according to Simon
+    "production_store": 0.5,
+    "routing_store": 0.5,
     "exponential_store": 0.3,
     "uh1": None,
     "uh2": None
@@ -56,12 +57,23 @@ outputs = model.run(inputs.data)
 print("\n***VALIDATION***")
 print(outputs.head())
 
-nse = spotpy.objectivefunctions.nashsutcliffe(inputs.data['flow_mm'], outputs['flow'])
-print(f"Used parameters for Validation: {parameters}")
-print(f"val_nse: {nse}")
 
-# fig = go.Figure([
-#     go.Scatter(x=outputs.index, y=outputs['flow'], name="Calculated"),
-#     go.Scatter(x=inputs.data.index, y=inputs.data['flow_mm'], name="Observed"),
-# ])
-# fig.show()
+filtered_input = inputs.data[inputs.data.index >= datetime.datetime(1952, 1, 1, 0, 0)]
+filtered_output = outputs[outputs.index >= datetime.datetime(1952, 1, 1, 0, 0)]
+
+nse = spotpy.objectivefunctions.nashsutcliffe(filtered_input['flow_mm'], filtered_output['flow'])
+print(f"Used parameters for Validation: {parameters}")
+print(f"gr7j_val_nse: {nse}")
+
+
+fig = go.Figure([
+    go.Scatter(x=filtered_output.index, y=filtered_output['flow'], name="Calculated"),
+    go.Scatter(x=filtered_input.index, y=filtered_input['flow_mm'], name="Observed"),
+])
+fig.show()
+
+# Save plot as png
+dir_path = next(Path.cwd().rglob('outputs_moselle'), None)
+if dir_path is not None:
+    output_name = dir_path / 'plot.png'
+    pio.write_image(fig, output_name, scale=5, width=1920, height=1080)
