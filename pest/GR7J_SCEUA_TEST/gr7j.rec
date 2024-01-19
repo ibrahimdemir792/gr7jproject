@@ -1,0 +1,178 @@
+
+                             SCEUA_P RUN RECORD FILE
+ 
+ 
+ Name of PEST control file : gr7j.pst
+ 
+ Problem dimensions ----->
+ 
+    Number of parameters                               : 8
+    Number of adjustable parameters                    : 8
+    Number of observations                             : 1
+    Number of prior information eqns                   : 0
+ 
+ SCE control variables ----->
+ 
+    Number of complexes in initial population          : 2
+    Minumum number of complexes                        : 2
+    Number of parameter sets in each complex           : 17
+    Number of parameter sets in a sub-complex          : 9
+    Number of evolution steps before complex shuffling : 17
+    Initial random seed                                : 1453
+ 
+    Include initial parameter set in population        : y
+    Print information on every point of population     : n
+ 
+ SCE termination criteria ----->
+    Maximum number of model runs                       : 1000
+    Relative objective function improvement            :  1.0000E-03
+    Number of shuffling loops to which this applies    : 10
+ 
+ Parameter data ----->
+ 
+ Name         Transformation          Initial_value     Lower_bound       Upper_bound
+ s1max           none                    632.360           0.00000            1500.00    
+ exch            none                  -0.383827          -10.0000            10.0000    
+ s2max           none                    220.349           1.00000            500.000    
+ uhb             none                    1.46063          0.500000            8.00000    
+ excht           none                   0.554692          -4.00000            4.00000    
+ s3max           none                    3.07680          0.500000            20.0000    
+ dd              none                    5.92146          1.000000E-02        7.00000    
+ x7              none                   0.900000          1.000000E-02       0.990000    
+ 
+ Name         Scale             Offset
+ s1max          1.00000           0.00000    
+ exch           1.00000           0.00000    
+ s2max          1.00000           0.00000    
+ uhb            1.00000           0.00000    
+ excht          1.00000           0.00000    
+ s3max          1.00000           0.00000    
+ dd             1.00000           0.00000    
+ x7             1.00000           0.00000    
+ 
+
+                           RECORD OF OPTIMISATION PROCESS
+ 
+
+
+ INITIAL PARAMETER SET
+    Number of model runs so far                  =      1
+    Objective function                           =  0.217203    
+
+
+ EVOLUTION LOOP NUMBER 1
+    Number of model runs so far                  =      34
+    Best objective function so far               =  0.217203    
+
+
+ EVOLUTION LOOP NUMBER 2
+    Number of model runs so far                  =      81
+    Best objective function so far               =  0.217203    
+
+
+ EVOLUTION LOOP NUMBER 3
+    Number of model runs so far                  =      144
+    Best objective function so far               =  0.217203    
+
+
+ EVOLUTION LOOP NUMBER 4
+    Number of model runs so far                  =      202
+    Best objective function so far               =  0.217203    
+
+
+ EVOLUTION LOOP NUMBER 5
+    Number of model runs so far                  =      258
+    Best objective function so far               =  0.217203    
+
+
+ EVOLUTION LOOP NUMBER 6
+    Number of model runs so far                  =      317
+    Best objective function so far               =  0.217203    
+
+
+ EVOLUTION LOOP NUMBER 7
+    Number of model runs so far                  =      376
+    Best objective function so far               =  0.214360    
+
+
+ EVOLUTION LOOP NUMBER 8
+    Number of model runs so far                  =      429
+    Best objective function so far               =  0.214360    
+
+
+ EVOLUTION LOOP NUMBER 9
+    Number of model runs so far                  =      481
+    Best objective function so far               =  0.214360    
+
+
+ EVOLUTION LOOP NUMBER 10
+    Number of model runs so far                  =      526
+    Best objective function so far               =  0.202077    
+
+
+ EVOLUTION LOOP NUMBER 11
+    Number of model runs so far                  =      577
+    Best objective function so far               =  0.198319    
+
+
+ EVOLUTION LOOP NUMBER 12
+    Number of model runs so far                  =      632
+    Best objective function so far               =  0.195744    
+
+
+ EVOLUTION LOOP NUMBER 13
+    Number of model runs so far                  =      687
+    Best objective function so far               =  0.193354    
+
+
+ EVOLUTION LOOP NUMBER 14
+    Number of model runs so far                  =      737
+    Best objective function so far               =  0.192774    
+
+
+ EVOLUTION LOOP NUMBER 15
+    Number of model runs so far                  =      785
+    Best objective function so far               =  0.192133    
+
+
+ EVOLUTION LOOP NUMBER 16
+    Number of model runs so far                  =      834
+    Best objective function so far               =  0.190436    
+
+
+ EVOLUTION LOOP NUMBER 17
+    Number of model runs so far                  =      878
+    Best objective function so far               =  0.188269    
+
+
+ EVOLUTION LOOP NUMBER 18
+    Number of model runs so far                  =      923
+    Best objective function so far               =  0.188139    
+
+
+ EVOLUTION LOOP NUMBER 19
+    Number of model runs so far                  =      973
+    Best objective function so far               =  0.187420    
+
+
+                        COMPLETION OF SCE PROCESS
+
+ Reason for termination of SCE process:-
+ 
+ User-supplied maximum number of model runs has been exceeded.
+
+ Optimised parameter values ----->
+
+    Name                Value
+    s1max                 526.044    
+    exch                -9.627868E-02
+    s2max                 292.841    
+    uhb                   2.31137    
+    excht                0.911754    
+    s3max                0.559190    
+    dd                    5.52344    
+    x7                   0.989303    
+ 
+ See file gr7j.par for optimised parameter values in parameter value 
+     file format.
+ See file sceout.dat for SCEUA-recorded optimisation record.

@@ -15,7 +15,7 @@ import json
 """
 # Load Catchment Data
 working_directory = Path('~/gr7jproject').expanduser().resolve()
-data_path = next(working_directory.rglob('**/karasu_cdo_karli.pkl'), None)
+data_path = next(working_directory.rglob('**/karasu_cdo_karsiz.pkl'), None)
 if data_path:
     df = pd.read_pickle(data_path)
 else:
@@ -80,7 +80,7 @@ calibration_data = df.loc[mask]
 
 spotpy_setup = SpotpySetup(calibration_data)
 
-sampler = spotpy.algorithms.dds(spotpy_setup, dbformat='ram', parallel='seq')
+sampler = spotpy.algorithms.sceua(spotpy_setup, dbformat='ram', parallel='seq')
 
 sampler.sample(2000)
 results=sampler.getdata() 

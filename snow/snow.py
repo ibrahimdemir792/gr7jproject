@@ -23,7 +23,7 @@ class snow(object):
         self.Tmax = None
         self.J = []
         self.t = None
-        self.Lat = 46.0
+        self.Lat = 41.0
         self.Date = None
         self.PEcalulated = None
         self.stataionel = 495
@@ -177,16 +177,24 @@ class snow(object):
     def outputPupdated(self):
         with open("Pupdated.csv", "w", newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(["Index", "Pupdated"])  # Add headers if needed
-            for i, value in enumerate(self.P + self.Pupdated):
-                writer.writerow([i, value])
+            writer.writerow(["Pupdated"])  # Add headers if needed
+            for value in (self.P + self.Pupdated):
+                writer.writerow([value])
+    
+    def insertNewP(self,originalP, newP):
+        df = pd.read_csv(originalP, sep=',', parse_dates=[0], header=0)
+        df1 = pd.read_csv(newP, sep=',', parse_dates=[0], header=0)
+        df["P"] = df1["Pupdated"]
+        df.to_csv(originalP, index=False)
+        df['date'] = pd.to_datetime(df['date'], format='%d/%m/%Y')
+        df.to_pickle('karasu_cdo_karli_copy.pkl')
 
 # Initilize object
 snow = snow()
 # Process path
 snow.process_path = Path.cwd()
 # Data file
-snow.Data_file = Path.cwd() / 'karasu_snow_cdo1.csv'
+snow.Data_file = Path.cwd() / 'karasu_snow_cdo.csv'
 # Calculate POT
 
 snow.DataRead()
@@ -196,6 +204,7 @@ snow.Zone()
 snow.updateP()
 snow.updatedf()
 snow.outputPupdated()
+snow.insertNewP('karasu_cdo_karli_copy.csv','Pupdated.csv')
 snow.draw()
 snow.drawpe()
 # snow.drawstorage()

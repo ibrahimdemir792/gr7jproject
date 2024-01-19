@@ -5,7 +5,7 @@ import pandas as pd
     Write your excel filename of your data into related fields
 """
 # Load excel file (read attribute reads as str)
-df = pd.read_excel('karasu_cdo_karsiz.xlsx')
+df = pd.read_excel('karasuPestValidation.xlsx')
 
 # Convert date column into datetime format
 df['date'] = pd.to_datetime(df['date'], format='%d/%m/%Y')
@@ -17,15 +17,15 @@ df['date'] = pd.to_datetime(df['date']).dt.strftime('%d/%m/%Y')
 df = df.fillna(0)
 
 # Export as csv
-df.to_csv('karasu_cdo_karsiz.csv', index=False)
+df.to_csv('karasuPestValidation.csv', index=False)
 
 # Load csv file and round values 
-df = pd.read_csv('karasu_cdo_karsiz.csv')
-df = df.round(2)
-df.to_csv('karasu_cdo_karsiz.csv', index=False)
+df = pd.read_csv('karasuPestValidation.csv')
+# df = df.round(2)
+df.to_csv('karasuPestValidation.csv', index=False)
 
 # Convert date column into datetime format
 df['date'] = pd.to_datetime(df['date'], format='%d/%m/%Y')
 
 # Export pickle file
-df.to_pickle('karasu_cdo_karsiz.pkl')
+df.to_pickle('karasuPestValidation.pkl')

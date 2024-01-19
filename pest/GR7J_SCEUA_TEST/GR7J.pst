@@ -1,0 +1,31 @@
+pcf
+* control data
+restart  estimation
+	8	1	1	0	1
+	1	1	single	point	1	0	0
+	5	20	0.3	0.0001	10
+	5	5	0.05	0
+	0.05
+	100	0.0001	20	20	0.0000001	20	0	0
+	1	1	1
+* parameter groups
+parsGR7J relative 0.05 0 switch 2 parabolic
+* parameter data
+S1max	none	factor	632.360		0	 	1500	 parsGR7J	1	0	1
+Exch   	none	factor	-0.383827	-10	 	10	     parsGR7J	1	0	1
+S2max 	none	factor	220.349		1	 	500      parsGR7J	1	0	1
+UHB     none	factor	1.46063		0.5	 	8	     parsGR7J	1	0	1
+Excht   none	factor	0.554692	-4	 	4	     parsGR7J	1	0	1
+S3max 	none	factor	3.07680		0.5		20       parsGR7J	1	0	1
+DD      none	factor	5.92146		0.01   	7        parsGR7J	1	0	1
+X7      none	factor	0.9			0.01   	0.99     parsGR7J	1	0	1
+* observation groups 
+err
+* observation data				
+NSE	1	1	err
+* model command line         				
+call_GR7J.bat         				
+* model input/output         				
+GR7J.tpl PARS.out      								
+NS.ins OF.out
+* prior information

@@ -9,15 +9,20 @@ import datetime
 import spotpy
 import json
 
+import matplotlib.pyplot as plt
+from spotpy.analyser import plot_parameter_trace
+from spotpy.analyser import plot_posterior_parameter_histogram
+
 
 """ LOAD CALIBRATION DATA 
     Datasets are available as Pandas dataframe pickle in the project repository.
 """
 # Load Catchment Data
 working_directory = Path('~/gr7jproject').expanduser().resolve()
-data_path = next(working_directory.rglob('**/karasu.pkl'), None)
+data_path = next(working_directory.rglob('**/karasu.csv'), None)
 if data_path:
-    df = pd.read_pickle(data_path)
+    df = pd.read_csv(data_path)
+    df['date'] = pd.to_datetime(df['date'], errors='coerce')
 else:
     print("Input data not found")
 df.columns = ['date', 'precipitation', 'temperature', 'evapotranspiration', 'flow_mm']
@@ -82,9 +87,11 @@ spotpy_setup = SpotpySetup(calibration_data)
 
 sampler = spotpy.algorithms.dds(spotpy_setup, dbformat='ram', parallel='seq')
 
-sampler.sample(2000)
+sampler.sample(3000)
 results=sampler.getdata() 
-best_parameters = spotpy.analyser.get_best_parameterset(results, maximize=True)
+best_parameters = spotpy.analyser.get_best_parameterset(results)
+spotpy.analyser.plot_parameterInteraction(results)  
+spotpy.analyser.plot_fast_sensitivity(results, number_of_sensitiv_pars=3)
 
 
 """ VALIDATION
@@ -110,8 +117,8 @@ model.set_parameters(parameters)
 
 # Set initial state :
 initial_states = {
-    "production_store": 0.5,
-    "routing_store": 0.6,
+    "production_store": 0.3,
+    "routing_store": 0.5,
     "exponential_store": 0.3,
     "uh1": None,
     "uh2": None
@@ -146,3 +153,34 @@ print(f"gr7j_val_nse: {nse}")
 # if dir_path is not None:
 #     output_name = dir_path / 'gr7j_karasu_hydrograph.png'
 #     pio.write_image(fig, output_name, scale=5, width=1920, height=1080)
+
+
+# # SCEUA best model run
+# bestindex,bestobjf = spotpy.analyser.get_minlikeindex(results)
+# best_model_run = results[bestindex]
+# fields=[word for word in best_model_run.dtype.names if word.startswith('sim')]
+# best_simulation = list(best_model_run[fields])
+# fig= plt.figure(figsize=(16,9))
+# ax = plt.subplot(1,1,1)
+# ax.plot(best_simulation,color='black',linestyle='solid', label='Best objf.='+str(bestobjf))
+# ax.plot(spotpy_setup.evaluation(),'r.',markersize=3, label='Observation data')
+# plt.xlabel('Number of Observation Points')
+# plt.ylabel ('Discharge [l s-1]')
+# plt.legend(loc='upper right')
+# fig.savefig('SCEUA_best_modelrun.png',dpi=300)
+
+
+# # Plot parameter uncertainty
+# parameters = spotpy.parameter.get_parameters_array(spotpy_setup)
+
+# fig, ax = plt.subplots(nrows=7, ncols=2)
+# for par_id in range(len(parameters)):
+#     plot_parameter_trace(ax[par_id][0], results, parameters[par_id])
+#     plot_posterior_parameter_histogram(ax[par_id][1], results, parameters[par_id])
+
+# ax[-1][0].set_xlabel('Iterations')
+# ax[-1][1].set_xlabel('Parameter range')
+
+# plt.show()
+# fig.savefig('hymod_parameters.png',dpi=300)
+

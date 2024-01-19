@@ -1,0 +1,549 @@
+                        PARAMETER SENSITIVITIES: CASE gr7j
+
+
+ OPTIMISATION ITERATION NO.  1 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         1.581370E-05
+   exch            parsgr7j       -2.100000E-02     0.476190    
+   s2max           parsgr7j         220.350         2.722941E-04
+   uhb             parsgr7j         1.41000          0.00000    
+   excht           parsgr7j         3.90000         3.076923E-03
+   s3max           parsgr7j         3.20000         5.312500E-03
+   dd              parsgr7j         6.70700         3.727449E-03
+   x7              parsgr7j        0.900000         1.000000E-02
+
+
+ OPTIMISATION ITERATION NO.  2 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         2.213918E-05
+   exch            parsgr7j       -2.100000E-02     0.488095    
+   s2max           parsgr7j         220.350         2.802360E-04
+   uhb             parsgr7j         1.41000         1.773050E-04
+   excht           parsgr7j         3.90000         2.820513E-03
+   s3max           parsgr7j         3.20000         5.312500E-03
+   dd              parsgr7j         6.70700         3.354704E-04
+   x7              parsgr7j        0.900000         1.388889E-02
+
+
+ OPTIMISATION ITERATION NO.  3 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         1.450907E-04
+   exch            parsgr7j       -4.200000E-03      5.53571    
+   s2max           parsgr7j         220.350         1.497617E-04
+   uhb             parsgr7j         1.41001         8.865217E-04
+   excht           parsgr7j         3.89990         6.538621E-03
+   s3max           parsgr7j         3.19982         1.000058E-02
+   dd              parsgr7j         6.70701         4.323834E-03
+   x7              parsgr7j        0.900478         2.637488E-02
+
+
+ OPTIMISATION ITERATION NO.  4 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         5.969672E-05
+   exch            parsgr7j       -1.260000E-02      2.34127    
+   s2max           parsgr7j         220.350         2.189698E-04
+   uhb             parsgr7j         1.41000         1.773043E-04
+   excht           parsgr7j         3.89991         8.333515E-03
+   s3max           parsgr7j         3.19980         7.422339E-03
+   dd              parsgr7j         6.70702         2.273737E-03
+   x7              parsgr7j        0.900438         3.886997E-03
+
+
+ OPTIMISATION ITERATION NO.  5 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         3.799242E-04
+   exch            parsgr7j       -6.300000E-02      12.8175    
+   s2max           parsgr7j         220.350         4.787838E-04
+   uhb             parsgr7j         1.41000         1.950355E-03
+   excht           parsgr7j         3.90009         0.228649    
+   s3max           parsgr7j         3.19964         7.813379E-05
+   dd              parsgr7j         6.70707         7.305729E-03
+   x7              parsgr7j        0.900354         7.163845E-02
+
+
+ OPTIMISATION ITERATION NO.  6 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         1.735554E-04
+   exch            parsgr7j       -3.780000E-02      5.62831    
+   s2max           parsgr7j         220.350         3.834808E-04
+   uhb             parsgr7j         1.41000         8.865217E-04
+   excht           parsgr7j         3.89964         5.994143E-02
+   s3max           parsgr7j         3.19964         2.500281E-03
+   dd              parsgr7j         6.70705         3.019209E-03
+   x7              parsgr7j        0.900496         3.997797E-02
+
+
+ OPTIMISATION ITERATION NO.  7 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         1.103006E-04
+   exch            parsgr7j       -7.560000E-03      4.23280    
+   s2max           parsgr7j         220.350         1.781257E-04
+   uhb             parsgr7j         1.41001         5.319111E-04
+   excht           parsgr7j         3.89931         8.911822E-03
+   s3max           parsgr7j         3.19963         8.985414E-03
+   dd              parsgr7j         6.70704         3.503784E-03
+   x7              parsgr7j        0.900714         1.665346E-02
+
+
+ OPTIMISATION ITERATION NO.  8 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         3.716220E-05
+   exch            parsgr7j       -2.268000E-02      1.02513    
+   s2max           parsgr7j         220.350         2.927161E-04
+   uhb             parsgr7j         1.41001         3.546087E-04
+   excht           parsgr7j         3.89935         6.475438E-03
+   s3max           parsgr7j         3.19959         5.000641E-03
+   dd              parsgr7j         6.70705         7.394259E-17
+   x7              parsgr7j        0.900642         1.609964E-02
+
+
+ OPTIMISATION ITERATION NO.  9 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         5.534796E-06
+   exch            parsgr7j       -1.814400E-02     0.454696    
+   s2max           parsgr7j         220.350         2.609485E-04
+   uhb             parsgr7j         1.41001         5.204170E-18
+   excht           parsgr7j         3.89936         2.308071E-03
+   s3max           parsgr7j         3.19962         6.016339E-03
+   dd              parsgr7j         6.70705         9.691295E-04
+   x7              parsgr7j        0.900474         7.773684E-03
+
+
+ OPTIMISATION ITERATION NO. 10 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         6.918495E-05
+   exch            parsgr7j       -2.721600E-02      2.43423    
+   s2max           parsgr7j         220.360         3.562353E-04
+   uhb             parsgr7j         1.41001         3.191478E-03
+   excht           parsgr7j         3.92255         1.841917E-02
+   s3max           parsgr7j         2.94020         8.077682E-03
+   dd              parsgr7j         6.76797         7.535494E-03
+   x7              parsgr7j        0.990000         3.636364E-02
+
+
+ OPTIMISATION ITERATION NO. 11 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         5.692933E-05
+   exch            parsgr7j       -2.585520E-02      2.00153    
+   s2max           parsgr7j         220.360         3.471592E-04
+   uhb             parsgr7j         1.41000         3.191478E-03
+   excht           parsgr7j         3.92254         1.446768E-02
+   s3max           parsgr7j         2.94020         8.417809E-03
+   dd              parsgr7j         6.76796         7.203051E-03
+   x7              parsgr7j        0.989980         3.838463E-02
+
+
+                              .....RESTART.....
+
+
+ OPTIMISATION ITERATION NO. 12 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         1.419280E-04
+   exch            parsgr7j       -5.171040E-03      5.36643    
+   s2max           parsgr7j         220.360         1.826557E-04
+   uhb             parsgr7j         1.40997         4.610027E-03
+   excht           parsgr7j         3.92239         7.775886E-03
+   s3max           parsgr7j         2.94011         1.488040E-02
+   dd              parsgr7j         6.76789         1.551444E-03
+   x7              parsgr7j        0.989583         8.286319E-02
+
+
+ OPTIMISATION ITERATION NO. 13 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         3.953425E-05
+   exch            parsgr7j       -1.551312E-02      1.40204    
+   s2max           parsgr7j         220.360         2.700127E-04
+   uhb             parsgr7j         1.40996         3.900820E-03
+   excht           parsgr7j         3.92240         6.118707E-03
+   s3max           parsgr7j         2.94008         1.105412E-02
+   dd              parsgr7j         6.76789         4.617395E-03
+   x7              parsgr7j        0.989423         5.760930E-02
+
+
+ OPTIMISATION ITERATION NO. 14 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         4.799063E-04
+   exch            parsgr7j       -7.756560E-02      16.9979    
+   s2max           parsgr7j         220.360         5.409330E-04
+   uhb             parsgr7j         1.40979         9.398563E-04
+   excht           parsgr7j         3.92267         0.372291    
+   s3max           parsgr7j         2.93959         2.508853E-03
+   dd              parsgr7j         6.76768         1.742472E-02
+   x7              parsgr7j        0.986874         3.422424E-02
+
+
+ OPTIMISATION ITERATION NO. 15 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         2.423450E-04
+   exch            parsgr7j       -4.724307E-02      8.44039    
+   s2max           parsgr7j         220.360         4.606099E-04
+   uhb             parsgr7j         1.40979         2.127984E-03
+   excht           parsgr7j         3.92201         0.111741    
+   s3max           parsgr7j         2.93959         4.932669E-03
+   dd              parsgr7j         6.76765         1.193176E-02
+   x7              parsgr7j        0.986935         3.039708E-03
+
+
+ OPTIMISATION ITERATION NO. 16 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         9.883564E-05
+   exch            parsgr7j       -9.448614E-03      3.59841    
+   s2max           parsgr7j         220.360         2.200944E-04
+   uhb             parsgr7j         1.40978         4.078651E-03
+   excht           parsgr7j         3.92151         9.562643E-03
+   s3max           parsgr7j         2.93957         1.292708E-02
+   dd              parsgr7j         6.76760         2.992198E-03
+   x7              parsgr7j        0.986921         6.890116E-02
+
+
+ OPTIMISATION ITERATION NO. 17 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         7.985919E-05
+   exch            parsgr7j       -2.834584E-02      2.79582    
+   s2max           parsgr7j         220.360         3.607733E-04
+   uhb             parsgr7j         1.40976         3.014708E-03
+   excht           parsgr7j         3.92156         2.199380E-02
+   s3max           parsgr7j         2.93950         7.654376E-03
+   dd              parsgr7j         6.76758         7.905337E-03
+   x7              parsgr7j        0.986559         3.142235E-02
+
+
+ OPTIMISATION ITERATION NO. 18 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         2.806932E-05
+   exch            parsgr7j       -2.267667E-02     0.992210    
+   s2max           parsgr7j         220.360         3.233345E-04
+   uhb             parsgr7j         1.40975         3.192055E-03
+   excht           parsgr7j         3.92151         6.183835E-03
+   s3max           parsgr7j         2.93948         8.930151E-03
+   dd              parsgr7j         6.76757         6.538541E-03
+   x7              parsgr7j        0.986495         4.105442E-02
+
+
+ OPTIMISATION ITERATION NO. 19 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         1.478581E-04
+   exch            parsgr7j       -4.535335E-03      5.62252    
+   s2max           parsgr7j         220.360         1.758486E-04
+   uhb             parsgr7j         1.40969         4.433599E-03
+   excht           parsgr7j         3.92140         7.076554E-03
+   s3max           parsgr7j         2.93932         1.479934E-02
+   dd              parsgr7j         6.76745         1.514604E-03
+   x7              parsgr7j        0.985745         8.191773E-02
+
+
+ OPTIMISATION ITERATION NO. 20 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         5.811535E-05
+   exch            parsgr7j       -1.360600E-02      2.07629    
+   s2max           parsgr7j         220.360         2.541296E-04
+   uhb             parsgr7j         1.40968         3.901581E-03
+   excht           parsgr7j         3.92141         7.841567E-03
+   s3max           parsgr7j         2.93929         1.139729E-02
+   dd              parsgr7j         6.76744         4.211338E-03
+   x7              parsgr7j        0.985613         5.833936E-02
+
+
+ OPTIMISATION ITERATION NO. 21 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         4.079935E-04
+   exch            parsgr7j       -6.803002E-02      14.3393    
+   s2max           parsgr7j         220.360         5.252768E-04
+   uhb             parsgr7j         1.40958         1.064147E-03
+   excht           parsgr7j         3.92162         0.275014    
+   s3max           parsgr7j         2.93900         2.892145E-03
+   dd              parsgr7j         6.76733         1.588513E-02
+   x7              parsgr7j        0.984083         2.515030E-02
+
+
+ OPTIMISATION ITERATION NO. 22 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         1.889737E-04
+   exch            parsgr7j       -4.081801E-02      6.55961    
+   s2max           parsgr7j         220.360         4.311127E-04
+   uhb             parsgr7j         1.40958         2.305651E-03
+   excht           parsgr7j         3.92110         7.497906E-02
+   s3max           parsgr7j         2.93899         5.529110E-03
+   dd              parsgr7j         6.76730         1.071328E-02
+   x7              parsgr7j        0.984131         9.399150E-03
+
+
+ OPTIMISATION ITERATION NO. 23 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         1.110913E-04
+   exch            parsgr7j       -8.163602E-03      4.10358    
+   s2max           parsgr7j         220.360         2.076148E-04
+   uhb             parsgr7j         1.40957         4.256617E-03
+   excht           parsgr7j         3.92072         9.373278E-03
+   s3max           parsgr7j         2.93896         1.335504E-02
+   dd              parsgr7j         6.76725         2.659869E-03
+   x7              parsgr7j        0.984084         7.036997E-02
+
+
+ OPTIMISATION ITERATION NO. 24 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         4.506905E-05
+   exch            parsgr7j       -2.449081E-02      1.58223    
+   s2max           parsgr7j         220.360         3.346796E-04
+   uhb             parsgr7j         1.40955         3.192508E-03
+   excht           parsgr7j         3.92076         1.071221E-02
+   s3max           parsgr7j         2.93891         8.336424E-03
+   dd              parsgr7j         6.76724         7.092995E-03
+   x7              parsgr7j        0.983805         3.557617E-02
+
+
+ OPTIMISATION ITERATION NO. 25 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         3.953425E-07
+   exch            parsgr7j       -1.959265E-02     1.275989E-02
+   s2max           parsgr7j         220.360         2.995099E-04
+   uhb             parsgr7j         1.40954         3.369894E-03
+   excht           parsgr7j         3.92073         1.275274E-04
+   s3max           parsgr7j         2.93888         9.442357E-03
+   dd              parsgr7j         6.76722         5.873904E-03
+   x7              parsgr7j        0.983695         4.472931E-02
+
+
+ OPTIMISATION ITERATION NO. 26 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         9.527755E-05
+   exch            parsgr7j       -2.938897E-02      3.17296    
+   s2max           parsgr7j         220.360         3.539659E-04
+   uhb             parsgr7j         1.40694         1.421525E-03
+   excht           parsgr7j         3.92083         2.595114E-02
+   s3max           parsgr7j         2.93169         5.201778E-03
+   dd              parsgr7j         6.76248         9.279140E-03
+   x7              parsgr7j        0.950707         1.577774E-03
+
+
+ OPTIMISATION ITERATION NO. 27 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         8.223125E-05
+   exch            parsgr7j       -2.791952E-02      2.71316    
+   s2max           parsgr7j         220.360         3.437553E-04
+   uhb             parsgr7j         1.40694         1.421525E-03
+   excht           parsgr7j         3.92082         2.110528E-02
+   s3max           parsgr7j         2.93169         5.457612E-03
+   dd              parsgr7j         6.76248         8.909453E-03
+   x7              parsgr7j        0.950707         1.051848E-03
+
+
+ OPTIMISATION ITERATION NO. 28 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         1.332304E-04
+   exch            parsgr7j       -5.583904E-03      5.05918    
+   s2max           parsgr7j         220.360         1.735794E-04
+   uhb             parsgr7j         1.40693         2.843070E-03
+   excht           parsgr7j         3.92064         7.843117E-03
+   s3max           parsgr7j         2.93164         1.193873E-02
+   dd              parsgr7j         6.76241         3.031466E-03
+   x7              parsgr7j        0.950698         4.707070E-02
+
+
+ OPTIMISATION ITERATION NO. 29 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         2.174384E-05
+   exch            parsgr7j       -1.675171E-02     0.910355    
+   s2max           parsgr7j         220.360         2.666089E-04
+   uhb             parsgr7j         1.40694         1.954590E-03
+   excht           parsgr7j         3.92059         4.208550E-03
+   s3max           parsgr7j         2.93160         8.101392E-03
+   dd              parsgr7j         6.76240         6.173848E-03
+   x7              parsgr7j        0.950539         2.077767E-02
+
+
+ OPTIMISATION ITERATION NO. 30 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.362         1.131014E-03
+   exch            parsgr7j       -5.121761E-02      10.7506    
+   s2max           parsgr7j         220.369         2.365356E-04
+   uhb             parsgr7j         1.34604         0.135712    
+   excht           parsgr7j         4.00000         0.150219    
+   s3max           parsgr7j         2.80423         7.952272E-03
+   dd              parsgr7j         6.63470         7.512397E-02
+   x7              parsgr7j        0.190108          1.01640    
+
+
+ OPTIMISATION ITERATION NO. 31 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.362         7.938491E-04
+   exch            parsgr7j       -1.024352E-02      1.43994    
+   s2max           parsgr7j         220.369         2.178170E-04
+   uhb             parsgr7j         1.34656         0.134045    
+   excht           parsgr7j         4.00000         4.125000E-03
+   s3max           parsgr7j         2.80426         4.279204E-03
+   dd              parsgr7j         6.63441         6.767741E-02
+   x7              parsgr7j        0.193980          1.00654    
+
+
+ OPTIMISATION ITERATION NO. 32 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.362         9.353819E-04
+   exch            parsgr7j       -3.073057E-02      4.74284    
+   s2max           parsgr7j         220.369         2.223548E-04
+   uhb             parsgr7j         1.34847         0.130333    
+   excht           parsgr7j         4.00000         3.937500E-02
+   s3max           parsgr7j         2.80432         8.736521E-03
+   dd              parsgr7j         6.63345         7.002389E-02
+   x7              parsgr7j        0.208301         0.969748    
+
+
+ OPTIMISATION ITERATION NO. 33 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.362         8.835920E-04
+   exch            parsgr7j       -2.458445E-02      2.90834    
+   s2max           parsgr7j         220.369         2.178170E-04
+   uhb             parsgr7j         1.34864         0.129761    
+   excht           parsgr7j         3.99995         1.918774E-02
+   s3max           parsgr7j         2.80433         8.469046E-03
+   dd              parsgr7j         6.63336         6.878113E-02
+   x7              parsgr7j        0.209556         0.962750    
+
+
+ OPTIMISATION ITERATION NO. 34 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.362         6.788042E-04
+   exch            parsgr7j       -4.916891E-03      3.15240    
+   s2max           parsgr7j         220.369         2.098757E-04
+   uhb             parsgr7j         1.34950         0.127825    
+   excht           parsgr7j         3.99982         4.062680E-03
+   s3max           parsgr7j         2.80439         3.387546E-03
+   dd              parsgr7j         6.63289         6.354691E-02
+   x7              parsgr7j        0.216093         0.954450    
+
+
+ OPTIMISATION ITERATION NO. 35 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.362         7.471986E-04
+   exch            parsgr7j       -1.475067E-02     5.084522E-02
+   s2max           parsgr7j         220.369         2.042034E-04
+   uhb             parsgr7j         1.34855         0.123466    
+   excht           parsgr7j         3.99985         1.875070E-04
+   s3max           parsgr7j         2.80442         9.003660E-03
+   dd              parsgr7j         6.63289         6.392387E-02
+   x7              parsgr7j        0.231618         0.903425    
+
+
+ OPTIMISATION ITERATION NO. 36 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         3.577850E-04
+   exch            parsgr7j       -5.979581E-02      12.6514    
+   s2max           parsgr7j         220.369         5.071040E-04
+   uhb             parsgr7j         1.45793         5.315756E-03
+   excht           parsgr7j         4.00000         0.208375    
+   s3max           parsgr7j         2.81239         3.644587E-03
+   dd              parsgr7j         6.57626         1.995815E-02
+   x7              parsgr7j        0.990000         1.035354E-02
+
+
+ OPTIMISATION ITERATION NO. 37 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         6.523152E-05
+   exch            parsgr7j       -1.195916E-02      2.65487    
+   s2max           parsgr7j         220.369         2.461780E-04
+   uhb             parsgr7j         1.45791         7.030612E-03
+   excht           parsgr7j         3.99921         8.751712E-03
+   s3max           parsgr7j         2.81238         1.208940E-02
+   dd              parsgr7j         6.57618         5.208187E-03
+   x7              parsgr7j        0.990000         6.489899E-02
+
+
+ OPTIMISATION ITERATION NO. 38 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         1.581370E-04
+   exch            parsgr7j       -3.587749E-02      5.42123    
+   s2max           parsgr7j         220.369         4.095404E-04
+   uhb             parsgr7j         1.45784         6.002010E-03
+   excht           parsgr7j         3.99930         5.325935E-02
+   s3max           parsgr7j         2.81226         6.311661E-03
+   dd              parsgr7j         6.57613         1.349577E-02
+   x7              parsgr7j        0.989394         2.097243E-02
+
+
+ OPTIMISATION ITERATION NO. 39 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         9.369618E-05
+   exch            parsgr7j       -2.870199E-02      3.13567    
+   s2max           parsgr7j         220.369         3.675653E-04
+   uhb             parsgr7j         1.45783         6.345025E-03
+   excht           parsgr7j         3.99916         2.469269E-02
+   s3max           parsgr7j         2.81224         7.556241E-03
+   dd              parsgr7j         6.57611         1.121484E-02
+   x7              parsgr7j        0.989374         3.310174E-02
+
+
+ OPTIMISATION ITERATION NO. 40 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         1.276956E-04
+   exch            parsgr7j       -5.740398E-03      5.13901    
+   s2max           parsgr7j         220.369         1.917239E-04
+   uhb             parsgr7j         1.45777         7.202758E-03
+   excht           parsgr7j         3.99915         8.126712E-03
+   s3max           parsgr7j         2.81217         1.457946E-02
+   dd              parsgr7j         6.57605         2.623153E-03
+   x7              parsgr7j        0.989062         8.012646E-02
+
+
+ OPTIMISATION ITERATION NO. 41 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         1.383699E-05
+   exch            parsgr7j       -1.722119E-02     0.711333    
+   s2max           parsgr7j         220.369         2.870186E-04
+   uhb             parsgr7j         1.45776         6.688344E-03
+   excht           parsgr7j         3.99917         3.438213E-03
+   s3max           parsgr7j         2.81214         1.031241E-02
+   dd              parsgr7j         6.57605         7.299215E-03
+   x7              parsgr7j        0.988896         5.258389E-02
+
+
+ OPTIMISATION ITERATION NO. 42 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         5.491308E-04
+   exch            parsgr7j       -8.610597E-02      19.8041    
+   s2max           parsgr7j         220.367         5.434111E-04
+   uhb             parsgr7j         1.49285         4.856483E-03
+   excht           parsgr7j         3.96179         0.477064    
+   s3max           parsgr7j         2.90845         2.492737E-03
+   dd              parsgr7j         6.65576         1.517484E-02
+   x7              parsgr7j        0.990000         3.686869E-02
+
+
+ OPTIMISATION ITERATION NO. 43 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.378         2.225726E-04
+   exch            parsgr7j       -6.447879E-02      6.60295    
+   s2max           parsgr7j         220.376         4.061241E-04
+   uhb             parsgr7j         1.38306         1.988337E-03
+   excht           parsgr7j         3.05222         0.158164    
+   s3max           parsgr7j         2.83546         6.260007E-03
+   dd              parsgr7j         6.30945         7.568019E-03
+   x7              parsgr7j        0.990000         1.919192E-02
+
+
+ OPTIMISATION ITERATION NO. 44 ----->
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.378         1.178093E-04
+   exch            parsgr7j       -1.289576E-02      2.73346    
+   s2max           parsgr7j         220.376         1.905834E-04
+   uhb             parsgr7j         1.38292         4.338630E-03
+   excht           parsgr7j         3.04949         1.303497E-02
+   s3max           parsgr7j         2.83487         1.455091E-02
+   dd              parsgr7j         6.30892         1.862442E-03
+   x7              parsgr7j        0.989676         8.714979E-02
+
+
+
+                        COMPLETION OF OPTIMISATION PROCESS
+
+ Composite sensitivities for all observations/prior info ----->
+
+ Number of observations with non-zero weight =     1
+ Parameter name    Group          Current value    Sensitivity
+   s1max           parsgr7j         632.363         4.506905E-05
+   exch            parsgr7j       -1.959265E-02      1.58223    
+   s2max           parsgr7j         220.360         3.346796E-04
+   uhb             parsgr7j         1.40954         3.192508E-03
+   excht           parsgr7j         3.92073         1.071221E-02
+   s3max           parsgr7j         2.93888         8.336424E-03
+   dd              parsgr7j         6.76722         7.092995E-03
+   x7              parsgr7j        0.983695         3.557617E-02
